@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="ant" default="helloAnt">
+  <target name="helloAnt" depends="gradleBuild">
+    <echo>Hello ant.</echo>
+  </target>
+
+  <target name="gradleBuild" depends="intro">
+    <echo message="a gradle target added"/>
+  </target>
+
+</project>

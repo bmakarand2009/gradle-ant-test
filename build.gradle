@@ -1,4 +1,5 @@
-ant.importBuild 'build.xml'
+//ant.importBuild 'build.xml'
+ant.importBuild 'build.working.xml'
 
 task intro << {
     println("Hello gradle.")
