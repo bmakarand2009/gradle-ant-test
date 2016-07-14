@@ -5,3 +5,14 @@ task intro << {
     println("Hello gradle.")
 }
 
+//note one issue face was it says in gradle documentation 
+//that if you need to invoke with << like the intro task above
+// but the moment you do that your Copy task will not work, so ensure you take that out
+//when moving your depencies to build.gradle
+task copyLibs (type : Copy){
+    def fromDir = rootProject.file("${projectDir}/libs")
+    def toDir = rootProject.file("${projectDir}/target/WEB-INF/libs")
+    from fromDir
+    into toDir
+    eachFile { println it.name }
+  }
